@@ -6,6 +6,7 @@ metadata:
   labels:
     test: copy
   name: test-kuard-gateway
+  namespace: test-kuard
 spec:
   selector:
     app: istio-ingressgateway
