@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  annotations:
+    env: test
+  labels:
+    test: copy
+  name: test-kuard-gateway
+  namespace: test-kuard
+spec:
+  selector:
+    app: istio-ingressgateway
+  servers:
+  - hosts:
+    - test-kuard-istio.apps.hammer.lab.psi.pnq2.redhat.com
+    port:
+      name: http
+      number: 80
+      protocol: HTTP
